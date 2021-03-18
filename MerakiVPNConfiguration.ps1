@@ -30,7 +30,7 @@ $DnsSuffix = Read-Host -Prompt 'Input the dns suffix used for the VPN connection
 
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
 Import-Module VpnClient
-Add-VpnConnection -RememberCredential -Name $Name -ServerAddress $ServerAddr -AuthenticationMethod Pap -TunnelType L2tp -EncryptionLevel Required -L2tpPsk $L2TPPSK -DnsSuffix $DnsSuffix -Force
+Add-VpnConnection -RememberCredential -Name $Name -ServerAddress $ServerAddr -AuthenticationMethod Pap -TunnelType L2tp -EncryptionLevel Optional -L2tpPsk $L2TPPSK -DnsSuffix $DnsSuffix -Force
 Write-Host "VPN Connection has been created..."
 Write-Host "VPN Display Name:" $Name
 Write-Host "Server:" $ServerAddr
