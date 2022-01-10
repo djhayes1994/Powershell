@@ -1,5 +1,5 @@
-$1year = (Get-Date).AddDays(-365) # The 365 is the number of days from today since the last logon. Disables user and moves to the disabled computer OU.
-$1y1m = (Get-Date).AddDays(-395) #1 year and 1 month after alst log on date, this removes the user.
+$1year = (Get-Date).AddDays(-365) # The 365 is the number of days from today since the last logon. Disables the computer and moves to the disabled computer OU.
+$1y1m = (Get-Date).AddDays(-395) #1 year and 1 month after last log on date, this removes the computer.
 
 #Modify line 8's property for Target Path to the DistinguishedName of the disabled computers OU. 
 
