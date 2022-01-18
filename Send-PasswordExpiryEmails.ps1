@@ -96,21 +96,18 @@ foreach ($user in $users) {
 		 #$EmailBody = $EmailStub1, $user.name, $EmailStub2, $days, $EmailStub3, $SevenDayWarnDate, $EmailStub4 -join ' '
 
 		 Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -Body $Body7 -BodyAsHtml
-         Send-MailMessage -To "pmyers@morefield.com" -From $MailSender -SmtpServer $SMTPServer -Subject "PW expires 7 days" -Body $user.name
  	}
  	elseif ($user.PasswordExpiry -eq $ThreeDayWarnDate) {
 		 $days = 3
 		 #$EmailBody = $EmailStub1, $user.name, $EmailStub2, $days, $EmailStub3, $ThreeDayWarnDate, $EmailStub4 -join ' '
 
 		 Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -Body $Body3 -BodyAsHtml
-         Send-MailMessage -To "pmyers@morefield.com" -From $MailSender -SmtpServer $SMTPServer -Subject "PW expires 3 days" -Body $user.name
  	}
  	elseif ($user.PasswordExpiry -eq $oneDayWarnDate) {
 		 $days = 1
 		 #$EmailBody = $EmailStub1, $user.name, $EmailStub2, $days, $EmailStub3, $OneDayWarnDate, $EmailStub4 -join ' '
 
 		 Send-MailMessage -To $user.EmailAddress -From $MailSender -SmtpServer $SMTPServer -Subject $Subject -Body $Body1 -BodyAsHtml
-         Send-MailMessage -To "pmyers@morefield.com" -From $MailSender -SmtpServer $SMTPServer -Subject "PW expires 1 day" -Body $user.name
  	}
 	else {}
  }
