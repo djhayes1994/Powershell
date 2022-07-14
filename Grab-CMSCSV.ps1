@@ -9,6 +9,7 @@
   None
 .OUTPUTS
   Downloads zip to file share, extracts all data sets from zip and stores them in the share. 
+  Creates log file in root of share. 
 .NOTES
   Version:        1.0
   Author:         Daniel Hayes
