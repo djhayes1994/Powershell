@@ -13,7 +13,7 @@
 .NOTES
   Version:        1.0
   Author:         Daniel Hayes
-  Email:          Morefield Communications, Inc. 
+  Email:          dan.hayes@morefield.com
   Creation Date:  07/14/2022
   Purpose/Change: Initial script development
   
